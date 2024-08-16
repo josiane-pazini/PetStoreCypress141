@@ -1,0 +1,16 @@
+{
+    "id": 117659801,
+    "category": {
+      "id": 1,
+      "name": "dog"
+    },
+    "name": "Detetive Labrador",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 1,
+        "name": "vaccined"
+      }
+    ],
+    "status": "available"
+  }

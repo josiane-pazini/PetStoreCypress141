@@ -1,0 +1,7 @@
+Cypress
+-Framework automação para API e Web (famoso)
+-Não requer um Framework de Teste de Unidade (engine interno)
+-Executa os testes dentro do navegador (browser) --> maior desempenho
+-Alto desempenho (até 10x, comparando com outros frameworks)
+---> Apenas em aplicações com arquitetura SPA (Single Page Aplication)
+-Concorrentes Principais: Slenium Webdriver, Playwright e Robot Framework
