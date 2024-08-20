@@ -1,5 +1,6 @@
 //Bibliotecas 
 import pet from '../fixtures/pet.json'
+import petAlterado from '../fixtures/petAlterado.json'
 
 describe('CRUD da entidade Pet', () =>{
 
@@ -54,10 +55,23 @@ describe('CRUD da entidade Pet', () =>{
       expect(body.status).to.eq(petAlterado.status)
     })
   }) // termina PUT
-
+ 
+  
   //Delete Pet
+  it ('DELETE Pet', () =>{
+    cy.request ({
+      method: 'DELETE',
+      url: `/pet/${pet.id}`
+    }).then(({status, body})=>{
+      expect(status).to.eq(200) //status code  --> comunicação com a API
+      expect(body.code).to.eq(200) // process code --> processamento na API
+      expect(body.type).to.eq('unknown') //tipo desconhecido - padrão
+      expect(body.message).to.eq(`${pet.id}`) // codigo do animal que foi excluido (`${pet.id}` para transformar o retorno que está em numero em texto)
+    })
+  }) // termina delete
 
-} )
+})
+
 
 
 
